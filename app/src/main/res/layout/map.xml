@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <org.bingmaps.sdk.BingMapsView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+<!--</RelativeLayout>-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/mainLinearLayout">
+    <ImageButton
+        android:id="@+id/btnMyLocation"
+        android:layout_width="36dp"
+        android:padding="2dp"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:background="@null"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_my_location_selector"
+        android:layout_height="36dp"
+        android:contentDescription="@string/myLocation"
+        android:layout_gravity="bottom"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="end"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btnZoomIn"
+            android:padding="2dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:src="@drawable/ic_zoom_in_selector"
+            android:contentDescription="@string/zoomIn" />
+
+        <ImageButton
+            android:id="@+id/btnZoomOut"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="2dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_zoom_out_selector"
+            android:contentDescription="@string/zoomOut" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editbtn"
+            android:text="Edit Location"/>
+    </LinearLayout>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lat"
+        android:text="latitude"
+        android:layout_weight="0.5"
+        android:textColor="@color/black"
+        android:textAlignment="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lng"
+        android:text="longitude"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_weight="0.5"/>
+    </LinearLayout>
+</RelativeLayout>
